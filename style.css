@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "PoppinsBold";
+  src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "PoppinsBoldItalic";
+  src: url(assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "PoppinsExtraBold";
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "PoppinsExtraBoldItalic";
+  src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url(assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  ---Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+body {
+  font-family: PoppinsBold;
+  font-size: clip(1rem, 70vh, 5rem);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: grey;
+}
+main {
+  min-width: 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem 3rem 2rem;
+  background: ghostwhite;
+  gap: 30px;
+  border-radius: 20px 20px 120px 20px;
+}
+
+/* input form */
+.age-from {
+  display: flex;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+  gap: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  background: ghostwhite;
+  width: 126px;
+  padding: 10px 10px;
+  font-family: PoppinsBold;
+  font-size: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -moz-appearance: textfield;
+}
+input:invalid:required {
+  border: none;
+  outline: 2px solid var(--Light-red);
+  border-radius: 5px;
+}
+
+label {
+  font-family: PoppinsBold;
+  color: var(--Smokey-grey);
+}
+input[for="day"]:invalid ~ label {
+  color: var(--Light-red);
+}
+
+input:invalid ~ label {
+  display: block;
+  color: var(--Light-red);
+}
+
+/* label:invalid {
+  color: var(--Light-red);
+  outline: 2px solid var(--Light-red);
+}
+ */
+
+/* line and button */
+.line {
+  position: relative;
+}
+img {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  transform: translate(0%, -50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 12px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--purple);
+}
+img:hover {
+  opacity: 0.9;
+}
+/* result dislply */
+
+.age-display {
+  font-family: PoppinsExtraBoldItalic;
+  font-size: 5rem;
+}
+
+.age-display span {
+  color: var(--purple);
+}

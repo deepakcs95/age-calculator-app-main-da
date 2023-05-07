@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <form class="age" action="age">
+        <div class="age-from">
+          <div class="form-div">
+            <label class="day" for="day">DAY</label>
+            <input
+              id="day"
+              name="day"
+              type="number"
+              value="31"
+              min="1"
+              max="31"
+              required
+            />
+            <label for="day">Must be a day</label>
+          </div>
+
+          <div class="form-div">
+            <label class="month" for="month">MONTH</label>
+            <input
+              id="month"
+              name="month"
+              type="number"
+              value="12"
+              min="1"
+              max="12"
+              required
+            />
+            <label for="month">Must be a month</label>
+          </div>
+          <div class="form-div">
+            <label class="year" for="year">YEAR</label>
+            <input
+              name="year"
+              id="year"
+              type="number"
+              value="1970"
+              min="1900"
+              max="2023"
+              required
+            />
+            <label for="year">Must be a valid year</label>
+          </div>
+        </div>
+      </form>
+      <div class="line">
+        <hr />
+        <img src="assets/images/icon-arrow.svg" alt="" srcset="" />
+      </div>
+
+      <div class="age-display">
+        <h1><span id="yearDisplay">--</span> years</h1>
+        <h1><span id="monthDisplay">--</span> months</h1>
+        <h1><span id="dayDisplay">--</span> days</h1>
+      </div>
+    </main>
+    <script src="index.js"></script>
+    <script type="module" src="dateCalculator.js"></script>
+  </body>
+</html>
